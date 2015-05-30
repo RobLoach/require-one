@@ -1,0 +1,29 @@
+{
+  "name": "require-one",
+  "version": "0.0.1",
+  "description": "Require the first found package from an array.",
+  "main": "require-one.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "engine": {
+    "iojs": ">=2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobLoach/require-one.git"
+  },
+  "keywords": [
+    "require"
+  ],
+  "author": "Rob Loach <robloach@gmail.com> (http://robloach.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobLoach/require-one/issues"
+  },
+  "homepage": "https://github.com/RobLoach/require-one#readme",
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "testit": "^2.0.2"
+  }
+}
