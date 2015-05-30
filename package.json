@@ -6,9 +6,6 @@
   "scripts": {
     "test": "node test"
   },
-  "engine": {
-    "iojs": ">=2.1.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RobLoach/require-one.git"
@@ -23,7 +20,6 @@
   },
   "homepage": "https://github.com/RobLoach/require-one#readme",
   "devDependencies": {
-    "babel": "^5.4.7",
     "testit": "^2.0.2"
   }
 }
