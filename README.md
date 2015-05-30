@@ -34,6 +34,10 @@ require(['require-one'], function(requireOne) {
     <head>
         <title>My Sample Project</title>
         <script type="text/javascript" src="../require-one.js"></script>
+        <script>
+          var con = requireOne(['nope', 'nopers', 'nopes', 'console']);
+          con.log('Hello World! Found the console?');
+        </script>
     </head>
     <body>
         <h1>My Sample Project</h1>
