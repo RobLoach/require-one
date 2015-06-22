@@ -10,41 +10,38 @@
  * Find out how we should load the packages.
  */
 (function (root, factory) {
+  /* global define */
   if (typeof define === 'function' && define.amd) {
     // AMD
-    define(function(require) {
+    define(function (require) {
       // Use AMD's require() wrapper.
-      return (root.requireOne = factory(require));
-    });
+      root.requireOne = factory(require)
+      return root.requireOne
+    })
   } else if (typeof exports === 'object') {
     // CommonJS
-    module.exports = factory(require);
+    module.exports = factory(require)
   } else {
     // Browser globals
     root.requireOne = factory(function (packageName) {
       // Build our own require function, checking the global scope.
       if (root[packageName]) {
-        return root[packageName];
+        return root[packageName]
       }
-      else {
-        throw new Error("Package " + packageName + "not found");
-      }
-    });
+      throw new Error('Package ' + packageName + 'not found')
+    })
   }
 }(this, function (requireFunction) {
-  /**
-   * Iterate through each package, and return the first loadable one.
-   */
-  return function(requires) {
+  // Iterate through each package, and return the first loadable one.
+  return function (requires) {
     for (var i in requires) {
-      var name = requires[i];
+      var name = requires[i]
       try {
-        return requireFunction(name);
-      }
-      catch (e) {
+        return requireFunction(name)
+      } catch (e) {
         // Do nothing.
       }
     }
-    throw new Error('Could not found one of the expected packages: ' + JSON.stringify(requires));
-  };
-}));
+    throw new Error('Could not found one of the expected packages: ' + JSON.stringify(requires))
+  }
+}))
