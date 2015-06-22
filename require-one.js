@@ -13,7 +13,7 @@
   if (typeof define === 'function' && define.amd) {
     // AMD
     define(function(require) {
-      // We will use AMD's require() wrapper.
+      // Use AMD's require() wrapper.
       return (root.requireOne = factory(require));
     });
   } else if (typeof exports === 'object') {
