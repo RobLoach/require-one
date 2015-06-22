@@ -1,0 +1,10 @@
+{
+  "name": "require-one",
+  "main": "require-one.js",
+  "ignore": [
+    ".*",
+    "test",
+    "example",
+    "*.json"
+  ]
+}
