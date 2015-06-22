@@ -1,9 +1,9 @@
 # Require One
 
-[![Build Status](https://img.shields.io/travis/RobLoach/require-one/master.svg)](http://travis-ci.org/RobLoach/jquery-once "Check this project's build status on TravisCI")
+[![Build Status](https://img.shields.io/travis/RobLoach/require-one/master.svg)](http://travis-ci.org/RobLoach/require-one "Check this project's build status on TravisCI")
 [![NPM version](https://img.shields.io/npm/v/require-one.svg)](https://npmjs.org/package/require-one "View this project on NPM")
 [![NPM downloads](https://img.shields.io/npm/dm/require-one.svg)](https://npmjs.org/package/require-one "View this project on NPM")
-[![Dependency Status](https://img.shields.io/david/RobLoach/jquery-once.svg)](https://david-dm.org/RobLoach/jquery-once)
+[![Dependency Status](https://img.shields.io/david/RobLoach/require-one.svg)](https://david-dm.org/RobLoach/require-one)
 
 Load the first package found from the given array.
 
