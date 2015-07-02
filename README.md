@@ -20,7 +20,9 @@ Method | Installation
 
 This works across CommonJS/Node, AMD and with global variables.
 
-### CommonJS/Node
+### CommonJS
+
+This is an example of loading either [jQuery](http://jquery.com), [Zepto](http://zeptojs.com), or [Cheerio](http://cheeriojs.github.io/cheerio) with a CommonJS module loader, like [Node.js](http://nodejs.org).
 
 ``` javascript
 var $ = requireOne('jquery', 'zepto', 'cheerio');
@@ -28,6 +30,8 @@ var $ = requireOne('jquery', 'zepto', 'cheerio');
 ```
 
 ### AMD
+
+This is an example of loading either [jQuery](http://jquery.com), [Zepto](http://zeptojs.com), or [Cheerio](http://cheeriojs.github.io/cheerio) with an AMD module loader, like [Require.js](http://requirejs.org).
 
 ``` javascript
 require(['require-one'], function(requireOne) {
@@ -42,12 +46,14 @@ require(['require-one'], function(requireOne) {
 
 ### Globals
 
+This is an example of loading either [jQuery](http://jquery.com), [Zepto](http://zeptojs.com), or [Cheerio](http://cheeriojs.github.io/cheerio) without a module loader, like with browser globals.
+
 ``` html
 <!DOCTYPE html>
 <html>
     <head>
         <title>My Sample Project</title>
-        <script type="text/javascript" src="../require-one.js"></script>
+        <script type="text/javascript" src="path/to/require-one.js"></script>
         <script>
           var con = requireOne('nope', 'nopers', 'nopes', 'console');
           con.log('Hello World! Found the console?');
