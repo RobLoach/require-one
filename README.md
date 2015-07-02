@@ -24,7 +24,7 @@ This works across CommonJS/Node, AMD and with global variables.
 
 ``` javascript
 var $ = requireOne('jquery', 'zepto', 'cheerio');
-// => jQuery or Cheerio, depending on which one is loaded first.
+// => jQuery, Zepto or Cheerio, depending on which one is available.
 ```
 
 ### AMD
@@ -33,8 +33,8 @@ var $ = requireOne('jquery', 'zepto', 'cheerio');
 require(['require-one'], function(requireOne) {
 
   // Retrieve the first package that is available.
-  var $ = requireOne('jquery', 'cheerio');
-  // => jQuery or Cheerio, depending on which one is loaded first.
+  var $ = requireOne('jquery', 'zepto', 'cheerio');
+  // => jQuery, Zepto or Cheerio, depending on which one is available.
 
   // ...
 });
