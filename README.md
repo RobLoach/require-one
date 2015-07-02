@@ -1,7 +1,6 @@
-# Require One
+# Require One [![NPM version](https://img.shields.io/npm/v/require-one.svg)](https://npmjs.org/package/require-one "View this project on NPM")
 
 [![Build Status](https://img.shields.io/travis/RobLoach/require-one/master.svg)](http://travis-ci.org/RobLoach/require-one "Check this project's build status on TravisCI")
-[![NPM version](https://img.shields.io/npm/v/require-one.svg)](https://npmjs.org/package/require-one "View this project on NPM")
 [![NPM downloads](https://img.shields.io/npm/dm/require-one.svg)](https://npmjs.org/package/require-one "View this project on NPM")
 [![Dependency Status](https://img.shields.io/david/RobLoach/require-one.svg)](https://david-dm.org/RobLoach/require-one)
 
@@ -24,7 +23,7 @@ This works across CommonJS/Node, AMD and with global variables.
 ### CommonJS/Node
 
 ``` javascript
-var $ = requireOne(['jquery', 'cheerio']);
+var $ = requireOne('jquery', 'zepto', 'cheerio');
 // => jQuery or Cheerio, depending on which one is loaded first.
 ```
 
@@ -34,7 +33,7 @@ var $ = requireOne(['jquery', 'cheerio']);
 require(['require-one'], function(requireOne) {
 
   // Retrieve the first package that is available.
-  var $ = requireOne(["jquery", "cheerio"]);
+  var $ = requireOne('jquery', 'cheerio');
   // => jQuery or Cheerio, depending on which one is loaded first.
 
   // ...
@@ -50,7 +49,7 @@ require(['require-one'], function(requireOne) {
         <title>My Sample Project</title>
         <script type="text/javascript" src="../require-one.js"></script>
         <script>
-          var con = requireOne(['nope', 'nopers', 'nopes', 'console']);
+          var con = requireOne('nope', 'nopers', 'nopes', 'console');
           con.log('Hello World! Found the console?');
         </script>
     </head>

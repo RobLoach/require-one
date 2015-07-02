@@ -7,6 +7,11 @@ test('Load from an array', function () {
   assert.deepEqual(testFramework, test)
 })
 
+test('Load from string arguments', function () {
+  var testFramework = requireOne('tape', 'testit')
+  assert.deepEqual(testFramework, test)
+})
+
 test('Throws an error when not found', function () {
   assert.throws(function () {
     requireOne(['not-found', '404'])

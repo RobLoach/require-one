@@ -22,26 +22,37 @@
     // CommonJS
     module.exports = factory(require)
   } else {
-    // Browser globals
-    root.requireOne = factory(function (packageName) {
-      // Build our own require function, checking the global scope.
+    /**
+     * Our own require function for the global scope.
+     */
+    function globalRequire (packageName) {
       if (root[packageName]) {
         return root[packageName]
       }
       throw new Error('Package ' + packageName + 'not found')
-    })
+    }
+    root.requireOne = factory(globalRequire)
   }
 }(this, function (requireFunction) {
-  // Iterate through each package, and return the first loadable one.
-  return function (requires) {
-    for (var i in requires) {
-      var name = requires[i]
+  /**
+   * Iterate through each package, returning the first loadable one.
+   *
+   * @arg {(...string|string[])} packages - An array of strings representing
+   *   which packages to load, or an argument list of strings to load.
+   *
+   * @returns The first loaded package from the packages parameter.
+   */
+  return function requireFromArray (packages) {
+    // Retrieve the list of package names.
+    var packagesNames = Array.isArray(packages) ? packages : arguments
+    for (var i in packagesNames) {
       try {
-        return requireFunction(name)
+        return requireFunction(packagesNames[i])
       } catch (e) {
-        // Do nothing.
+        // Do nothing, but continue on to the next package.
+        continue
       }
     }
-    throw new Error('Could not found one of the expected packages: ' + JSON.stringify(requires))
+    throw new Error('Could not found one of the expected packages: ' + JSON.stringify(packages))
   }
 }))

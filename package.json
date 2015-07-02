@@ -1,10 +1,10 @@
 {
   "name": "require-one",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Require the first found package from an array.",
   "main": "require-one.js",
   "scripts": {
-    "test": "standard && node test"
+    "test": "standard require-one.js test/index.js; node test"
   },
   "repository": {
     "type": "git",
