@@ -1,6 +1,6 @@
 {
   "name": "require-one",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Require the first found package from an array.",
   "main": "require-one.js",
   "scripts": {
@@ -22,5 +22,11 @@
   "devDependencies": {
     "standard": "^4.3.1",
     "testit": "^2.0.2"
+  },
+  "browser": "./require-one.js",
+  "browserPackage": {
+    "files": [
+      "require-one.js"
+    ]
   }
 }

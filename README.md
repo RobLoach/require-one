@@ -6,7 +6,6 @@
 
 Load the first package found from the given array.
 
-
 ## Install
 
 Method | Installation
@@ -14,7 +13,6 @@ Method | Installation
 [npm](http://npmjs.com/package/jquery-once) | `npm install require-one --save`
 [Composer](https://packagist.org/packages/robloach/require-one) | `composer require require-one`
 [Bower](http://bower.io/search/?q=require-one) | `bower install require-one`
-
 
 ## Usage
 
@@ -63,3 +61,7 @@ This is an example of loading either [jQuery](http://jquery.com), [Zepto](http:/
         <h1>My Sample Project</h1>
     </body>
 </html>
+
+## License
+
+[MIT](LICENSE.md)
