@@ -12,35 +12,42 @@
 (function (root, factory) {
   /* global define */
   if (typeof define === 'function' && define.amd) {
-    // AMD
+    /**
+     * AMD
+     */
     define(function (require) {
       // Use AMD's require() wrapper.
       root.requireOne = factory(require)
       return root.requireOne
     })
   } else if (typeof exports === 'object') {
-    // CommonJS
+    /**
+     * CommonJS
+     */
     module.exports = factory(require)
   } else {
     /**
-     * Our own require function for the global scope.
+     * Global scope
      */
-    function globalRequire (packageName) {
+    root.requireOne = factory(function (packageName) {
       if (root[packageName]) {
         return root[packageName]
       }
       throw new Error('Package ' + packageName + 'not found')
-    }
-    root.requireOne = factory(globalRequire)
+    })
   }
 }(this, function (requireFunction) {
   /**
    * Iterate through each package, returning the first loadable one.
    *
-   * @arg {(...string|string[])} packages - An array of strings representing
-   *   which packages to load, or an argument list of strings to load.
+   * @param {(...string|string[])} packages - An array or argument list of
+   *   strings representing which packages to load.
    *
-   * @returns The first loaded package from the packages parameter.
+   * @returns The first available package. Throws an error otherwise.
+   *
+   * @throws Throws an Error when none of the packages could be loaded.
+   *
+   * @global
    */
   return function requireFromArray (packages) {
     // Retrieve the list of package names.
