@@ -4,7 +4,7 @@
 [![NPM downloads](https://img.shields.io/npm/dm/require-one.svg)](https://npmjs.org/package/require-one "View this project on NPM")
 [![Dependency Status](https://img.shields.io/david/RobLoach/require-one.svg)](https://david-dm.org/RobLoach/require-one)
 
-Load the first package found from the given array.
+> Load the first package found from the given array.
 
 ## Install
 
