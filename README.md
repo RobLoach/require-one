@@ -44,23 +44,23 @@ require(['require-one'], function(requireOne) {
 
 ### Globals
 
-This is an example of loading either [jQuery](http://jquery.com), [Zepto](http://zeptojs.com), or [Cheerio](http://cheeriojs.github.io/cheerio) without a module loader, like with browser globals.
+This is an example of loading either [jQuery](http://jquery.com), [Zepto](http://zeptojs.com), or [Cheerio](http://cheeriojs.github.io/cheerio) without a module loader, i.e. with the browser's global variables.
 
 ``` html
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Sample Project</title>
         <script type="text/javascript" src="path/to/require-one.js"></script>
         <script>
-          var con = requireOne('nope', 'nopers', 'nopes', 'console');
-          con.log('Hello World! Found the console?');
+          var $ = requireOne('jquery', 'jQuery', 'zepto', 'Zepto', 'cheerio');
+          // => jQuery, Zepto or Cheerio, depending on which one is available.
         </script>
     </head>
     <body>
         <h1>My Sample Project</h1>
     </body>
 </html>
+```
 
 ## License
 
