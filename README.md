@@ -49,16 +49,16 @@ This is an example of loading either [jQuery](http://jquery.com), [Zepto](http:/
 ``` html
 <!DOCTYPE html>
 <html>
-    <head>
-        <script type="text/javascript" src="path/to/require-one.js"></script>
-        <script>
-          var $ = requireOne('jquery', 'jQuery', 'zepto', 'Zepto', 'cheerio');
-          // => jQuery, Zepto or Cheerio, depending on which one is available.
-        </script>
-    </head>
-    <body>
-        <h1>My Sample Project</h1>
-    </body>
+  <head>
+    <script type="text/javascript" src="path/to/require-one.js"></script>
+    <script>
+      var $ = requireOne('jquery', 'jQuery', 'zepto', 'Zepto', 'cheerio');
+      // => jQuery, Zepto or Cheerio, depending on which one is available.
+    </script>
+  </head>
+  <body>
+    <h1>My Sample Project</h1>
+  </body>
 </html>
 ```
 
