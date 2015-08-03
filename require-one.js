@@ -30,7 +30,7 @@
      * Global scope
      */
     root.requireOne = factory(function (packageName) {
-      if (root[packageName]) {
+      if (packageName in root) {
         return root[packageName]
       }
       throw new Error('Package ' + packageName + 'not found')
