@@ -1,0 +1,10 @@
+{
+  "name": "require-one",
+  "repository": "RobLoach/require-one",
+  "description": "Require One",
+  "version": "1.0.0",
+  "scripts": [
+    "require-one.js"
+  ],
+  "license": "MIT"
+}
