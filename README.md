@@ -11,6 +11,7 @@
 Method | Installation
 ------ | ------------
 [npm](http://npmjs.com/package/jquery-once) | `npm install require-one --save`
+[component](https://github.com/componentjs/component) | `component install robloach/require-one`
 [Composer](https://packagist.org/packages/robloach/require-one) | `composer require require-one`
 [Bower](http://bower.io/search/?q=require-one) | `bower install require-one`
 
