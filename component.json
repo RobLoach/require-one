@@ -2,7 +2,7 @@
   "name": "require-one",
   "repository": "RobLoach/require-one",
   "description": "Require One",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": [
     "require-one.js"
   ],

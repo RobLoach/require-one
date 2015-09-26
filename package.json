@@ -1,10 +1,10 @@
 {
   "name": "require-one",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Require the first found package from an array.",
   "main": "require-one.js",
   "scripts": {
-    "test": "standard require-one.js test/index.js; node test"
+    "test": "node test && semistandard"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/RobLoach/require-one#readme",
   "devDependencies": {
-    "standard": "^4.3.1",
+    "semistandard": "^7.0.2",
     "testit": "^2.0.2"
   },
   "browser": "./require-one.js",

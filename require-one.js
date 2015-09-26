@@ -17,24 +17,24 @@
      */
     define(function (require) {
       // Use AMD's require() wrapper.
-      root.requireOne = factory(require)
-      return root.requireOne
-    })
+      root.requireOne = factory(require);
+      return root.requireOne;
+    });
   } else if (typeof exports === 'object') {
     /**
      * CommonJS
      */
-    module.exports = factory(require)
+    module.exports = factory(require);
   } else {
     /**
      * Global scope
      */
     root.requireOne = factory(function (packageName) {
       if (packageName in root) {
-        return root[packageName]
+        return root[packageName];
       }
-      throw new Error('Package ' + packageName + 'not found')
-    })
+      throw new Error('Package ' + packageName + 'not found');
+    });
   }
 }(this, function (requireFunction) {
   /**
@@ -51,15 +51,15 @@
    */
   return function requireFromArray (packages) {
     // Retrieve the list of package names.
-    var packagesNames = Array.isArray(packages) ? packages : arguments
+    var packagesNames = Array.isArray(packages) ? packages : arguments;
     for (var i in packagesNames) {
       try {
-        return requireFunction(packagesNames[i])
+        return requireFunction(packagesNames[i]);
       } catch (e) {
         // Do nothing, but continue on to the next package.
-        continue
+        continue;
       }
     }
-    throw new Error('Could not found one of the expected packages: ' + JSON.stringify(packages))
-  }
-}))
+    throw new Error('Could not found one of the expected packages: ' + JSON.stringify(packages));
+  };
+}));
