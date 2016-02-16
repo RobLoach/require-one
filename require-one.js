@@ -36,7 +36,7 @@
       throw new Error('Package ' + packageName + 'not found');
     });
   }
-}(this, function (requireFunction) {
+})(this, function (requireFunction) {
   /**
    * Iterate through each package, returning the first loadable one.
    *
@@ -49,17 +49,19 @@
    *
    * @global
    */
-  return function requireFromArray (packages) {
+  return function requireFromArray(packages) {
     // Retrieve the list of package names.
     var packagesNames = Array.isArray(packages) ? packages : arguments;
     for (var i in packagesNames) {
-      try {
-        return requireFunction(packagesNames[i]);
-      } catch (e) {
-        // Do nothing, but continue on to the next package.
-        continue;
+      if (packagesNames.hasOwnProperty(i)) {
+        try {
+          return requireFunction(packagesNames[i]);
+        } catch (e) {
+          // Do nothing, but continue on to the next package.
+          continue;
+        }
       }
     }
     throw new Error('Could not found one of the expected packages: ' + JSON.stringify(packages));
   };
-}));
+});

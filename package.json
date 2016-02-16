@@ -4,7 +4,8 @@
   "description": "Require the first found package from an array.",
   "main": "require-one.js",
   "scripts": {
-    "test": "node test && semistandard"
+    "test": "node test",
+    "posttest": "xo --space"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,8 @@
   },
   "homepage": "https://github.com/RobLoach/require-one#readme",
   "devDependencies": {
-    "semistandard": "^7.0.2",
-    "testit": "^2.0.2"
+    "testit": "^2.0.2",
+    "xo": "^0.12.1"
   },
   "browser": "./require-one.js",
   "browserPackage": {
