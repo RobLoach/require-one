@@ -1,6 +1,6 @@
 {
   "name": "require-one",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Require the first found package from an array.",
   "main": "require-one.js",
   "files": [

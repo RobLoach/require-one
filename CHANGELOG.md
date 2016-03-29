@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
+- Nothing
+
+## [1.0.2] - 2015-03-29
+### Changed
 - Switched to [Keep a Changelog](http://keepachangelog.com/) for [CHANGELOG.md](CHANGELOG.md)
 - Updated development dependencies
 - npm package now only includes [`require-one.js`](require-one.js)
