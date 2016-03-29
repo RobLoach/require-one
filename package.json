@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Require the first found package from an array.",
   "main": "require-one.js",
+  "files": [
+    "require-one.js"
+  ],
   "scripts": {
     "test": "node test",
     "posttest": "xo --space"
@@ -22,7 +25,7 @@
   "homepage": "https://github.com/RobLoach/require-one#readme",
   "devDependencies": {
     "testit": "^2.0.2",
-    "xo": "^0.12.1"
+    "xo": "^0.13.0"
   },
   "browser": "./require-one.js",
   "browserPackage": {

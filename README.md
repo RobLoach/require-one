@@ -17,7 +17,7 @@ Method | Installation
 
 ## Usage
 
-This works across CommonJS/Node, AMD and with global variables.
+This works across [CommonJS](https://webpack.github.io/docs/commonjs.html)/[node](http://nodejs.org), [AMD](http://requirejs.org/docs/whyamd.html#amd) and with global variables for the browser.
 
 ### CommonJS
 
