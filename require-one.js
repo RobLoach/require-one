@@ -49,7 +49,7 @@
    *
    * @global
    */
-  return function requireFromArray(packages) {
+  return function(packages) {
     // Retrieve the list of package names.
     var packagesNames = Array.isArray(packages) ? packages : arguments;
     for (var i in packagesNames) {

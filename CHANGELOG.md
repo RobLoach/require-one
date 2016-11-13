@@ -2,9 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [1.0.3] - xxxx-xx-xx
 ### Changed
-- Nothing
+- Fixed xo coding styles
 
 ## [1.0.2] - 2015-03-29
 ### Changed
