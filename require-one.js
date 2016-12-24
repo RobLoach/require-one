@@ -49,14 +49,14 @@
    *
    * @global
    */
-  return function(packages) {
+  return function (packages) {
     // Retrieve the list of package names.
     var packagesNames = Array.isArray(packages) ? packages : arguments;
     for (var i in packagesNames) {
-      if (packagesNames.hasOwnProperty(i)) {
+      if (packagesNames[i]) {
         try {
           return requireFunction(packagesNames[i]);
-        } catch (e) {
+        } catch (err) {
           // Do nothing, but continue on to the next package.
           continue;
         }
