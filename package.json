@@ -7,8 +7,7 @@
     "require-one.js"
   ],
   "scripts": {
-    "test": "node test",
-    "posttest": "xo --space"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -24,8 +23,7 @@
   },
   "homepage": "https://github.com/RobLoach/require-one#readme",
   "devDependencies": {
-    "testit": "^2.1.2",
-    "xo": "^0.17.1"
+    "testit": "^3.1.0"
   },
   "browser": "./require-one.js",
   "browserPackage": {
